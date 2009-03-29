@@ -28,6 +28,16 @@ class FakeModem
     return true
   end
   
+  def receive(blk)
+    puts "Calling receive w/ #{blk.inspect}"
+    puts "Enter messages in format: 'from_number, message', exit w/ exit"
+    while (line = gets.strip).downcase != "exit"
+      from, msg = line.split(", ", 2)
+      blk.call(from, Time.now, msg)
+    end
+    puts "Exiting..."
+  end
+  
 end
 
-$modem = Gsm::Modem.new(settings["device_path"])
+$modem = (ENV['TEST'] ? FakeModem : Gsm::Modem).new(settings["device_path"])
