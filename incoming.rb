@@ -18,13 +18,12 @@ class WPFReceiver
 
   def incoming(from, datetime, message)
     sms = SMS.receive(:contents => message, :number => from)
-    json = {
+    dispatch_json({
       "number"   => from,
       "contents" => message,
       "id"       => sms.id,
       "path"     => "/messages/#{sms.id}"
-    }.to_json
-    dispatch_json(json)
+    }.to_json)
   end
   
   protected
