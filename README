@@ -1,6 +1,6 @@
 Getting started is simple.
 
-1. Install http://github.com/jeffrafter/rubygsm/tree/master
+1. Install http://github.com/jeffrafter/rubygsm/tree/master, http://github.com/taf2/curb/tree/master
 2. Edit wpf.yml with correct details
 3. Run incoming.rb and outgoing.rb, possibly in a screen session
    These processes will send and receive SMS.
