@@ -1,0 +1,4 @@
+hook_urls:
+  - "http://localhost:4567/valid-hook"
+device_path: "/dev/tty.0xC0FFEE-Dial-UpNetwork-2"
+number: "0458070879"
