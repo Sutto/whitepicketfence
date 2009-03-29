@@ -40,4 +40,4 @@ class FakeModem
   
 end
 
-$modem = (ENV['TEST'] ? FakeModem : Gsm::Modem).new(settings["device_path"])
+$modem = (ENV['WPF_TEST'] ? FakeModem : Gsm::Modem).new(settings["device_path"])

@@ -7,3 +7,5 @@ Getting started is simple.
 4. run wpf.rb - this will start a sinatra web service. Post to
    /messages w/ the correct params (see the model) and it will
    queue up a message to be sent out.
+
+if you want to use the fake modem, first do: export WPF_TEST=true
